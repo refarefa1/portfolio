@@ -1,0 +1,88 @@
+* {
+    font-family: 'Roboto Mono', monospace;
+    cursor: none;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: $primary-color;
+    color: $dark-color;
+}
+
+body {
+    margin: 0;
+    line-height: 1;
+
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+a {
+    all: unset;
+}
+
+button {
+    border: none;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.cursor {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    border: 1px solid $light-color;
+    transition: all 200ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+    z-index: 1000000;
+
+    &.hover {
+        width: 48px;
+        height: 48px;
+    }
+
+    @include for-mobile-layout {
+        display: none;
+    }
+}
+
+.inner-cursor {
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: $light-color;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width .3s, height .3s, opacity .3s;
+    z-index: 1000000;
+
+    @include for-mobile-layout {
+        display: none;
+    }
+}
+
+#root {
+    background-color: $dark-color;
+    overflow-x: hidden;
+}

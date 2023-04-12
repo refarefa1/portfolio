@@ -1,0 +1,96 @@
+.someday-svg {
+    #Layer_2-2 {
+        #OBJECTS {
+            g {
+                .cls-1 {
+                    fill: $light-color;
+                }
+
+                .cls-3 {
+                    fill: $light-color;
+                }
+
+                .cls-4 {
+                    fill: $light-color;
+
+                }
+            }
+        }
+
+        &:last-child {
+            path {
+                fill: $light-color;
+            }
+        }
+    }
+}
+
+.cv-svg {
+
+    #Layer_1-2 {
+        g {
+            path {
+                fill: $light-color;
+
+                &.cls-1 {
+                    fill: $light-color;
+                }
+            }
+        }
+    }
+}
+
+.youtube-svg {
+    #Layer_1-2 {
+        g {
+            g {
+                &:not(#youtube-paths) {
+                    .cls-2 {
+                        fill: $light-color;
+                    }
+
+                    .cls-1 {
+                        fill: $dark-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.scooper-svg {
+    * {
+        fill: $light-color !important;
+
+    }
+}
+
+.shuka-svg {
+    scale: .4;
+
+    g {
+        g {
+            path {
+                fill: $light-color;
+            }
+        }
+    }
+}
+
+.izhar-img {
+    @include center;
+    aspect-ratio: 1 / 1;
+    border-radius: 10em;
+
+    img {
+        width: 80px;
+    }
+}
+
+.rami-svg {
+    scale: .8;
+    * {
+        fill: $light-color !important;
+
+    }
+}

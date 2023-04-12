@@ -1,0 +1,86 @@
+/* Breakpoint mixins */
+
+@mixin for-mobile-layout {
+    @media (max-width: calc($mobile-breakpoint + 40px)) {
+        @content;
+    }
+}
+
+@mixin for-narrow-layout {
+    @media (max-width: calc($narrow-breakpoint + 40px)) {
+        @content;
+    }
+}
+
+@mixin for-normal-layout {
+    @media (max-width: calc($normal-breakpoint + 40px)) {
+        @content;
+    }
+}
+
+@mixin for-wide-layout {
+    @media (max-width: calc($wide-breakpoint + 40px)) {
+        @content;
+    }
+}
+
+
+
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+;
+
+@mixin hover {
+    @media (hover:hover) {
+        &:hover {
+            @content
+        }
+    }
+}
+
+;
+
+@mixin special-btn {
+    border-radius: 6px;
+    width: 220px;
+    height: 60px;
+    color: $primary-color;
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    font-weight: 900;
+    font-size: rem(18px);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: .3s;
+
+    span {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: $primary-color;
+        -webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    @include hover {
+
+        color: $dark-color;
+
+        span {
+            width: 225%;
+            height: 562.5px;
+        }
+    }
+
+}

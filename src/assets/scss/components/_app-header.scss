@@ -1,0 +1,102 @@
+.main-header {
+    height: 90vh;
+    background-color: $dark-color;
+    padding-inline: calc((100vw - $desktop-width) / 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .main-header__title--start,
+    .main-header__title--end {
+        opacity: 0;
+        font-size: rem(82px);
+        color: $light-color;
+        display: inline-flex;
+
+        .letter {
+            &.animate {
+                animation: rubberband 800ms alternate ease-out;
+            }
+
+            &.colored {
+                color: $primary-color;
+            }
+
+        }
+    }
+
+    .main-header__title--start {
+        animation: translateX .6s ease-in-out .2s forwards;
+
+    }
+
+    .main-header__title--end {
+        animation: translateX .6s ease-in-out .4s forwards;
+    }
+
+    .main-header__subtitle {
+        opacity: 0;
+        color: $light-color;
+        font-size: rem(38px);
+        margin-bottom: 32px;
+        animation: translateX .6s ease-out .6s forwards;
+        display: inline-flex;
+        margin-top: 16px;
+
+        .letter {
+            &.animate {
+                animation: rubberband 800ms alternate ease-out;
+            }
+        }
+
+        .animated {
+            color: $primary-color;
+
+        }
+    }
+
+    .main-header__cta {
+        opacity: 0;
+        animation: opacity .6s ease-in-out 1s forwards;
+        @include special-btn;
+    }
+
+    @include for-wide-layout {
+        padding-inline: $wide-padding;
+    }
+
+    @include for-normal-layout {
+        padding-inline: $normal-padding;
+
+        .main-header__title--start,
+        .main-header__title--end {
+            .letter {
+                font-size: clamp(32px, 12vw, 80px);
+            }
+        }
+
+        .main-header__subtitle {
+            font-size: clamp(22px, 4vw, 80px);
+        }
+    }
+
+    @include for-mobile-layout {
+        height: 100dvh;
+        @include center;
+        padding-inline: $mobile-padding;
+
+        .main-header__cta {
+            margin-inline: auto;
+            margin-top: 24px;
+        }
+
+        .main-header__subtitle {
+            .animated {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 32px;
+            }
+        }
+    }
+}

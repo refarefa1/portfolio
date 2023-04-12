@@ -1,0 +1,76 @@
+.main-nav {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    position: sticky;
+    top: 0px;
+    background-color: $dark-color;
+    z-index: 1;
+    animation: translateY .4s ease-in-out;
+
+    button {
+        background-color: transparent;
+        color: $light-color;
+        font-size: rem(18px);
+        font-family: 'Roboto Mono', monospace;
+        transition: .4s;
+        letter-spacing: -1px;
+        position: relative;
+        counter-increment: number;
+        padding: 0;
+
+        span {
+            padding-inline: 6px;
+        }
+
+        &::before {
+            content: "0" counter(number);
+            display: inline-block;
+            font-weight: 700;
+            width: auto;
+            right: 0;
+            top: -0.75em;
+            line-height: .6em;
+            font-size: .6em;
+            position: absolute;
+            height: auto;
+            opacity: .75;
+        }
+
+        @include hover {
+            color: $primary-color;
+
+            span {}
+        }
+    }
+
+    @include for-mobile-layout {
+        height: 10vh;
+        width: 100%;
+        position: fixed;
+        z-index: 10;
+        gap: 48px;
+        transition: .4s ease-in-out;
+        animation: none;
+        top: 90dvh;
+        background-color: $primary-color;
+        // border-top: 1px solid $light-color;
+
+        button {
+            font-size: rem(16px);
+            color: $dark-color;
+
+            span {
+                display: none;
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+
+    }
+
+}
