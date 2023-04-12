@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.82798c3f.css",
+    "main.js": "/portfolio/static/js/main.3bc6d361.js",
+    "static/media/izhar.png": "/portfolio/static/media/izhar.c61b1ce9353795c9bc6c.png",
+    "static/media/izhar-bg.png": "/portfolio/static/media/izhar-bg.3fdc7c233bf96eb59fac.png",
+    "static/media/youtube-bg.png": "/portfolio/static/media/youtube-bg.4e3e81105cf31ba6beca.png",
+    "static/media/rami-bg.png": "/portfolio/static/media/rami-bg.a716396b644de8fcfa1e.png",
+    "static/media/shuka-bg.png": "/portfolio/static/media/shuka-bg.4d652235388c68324efc.png",
+    "static/media/nintendo-bg.png": "/portfolio/static/media/nintendo-bg.4b9e2e4c47ed1a5ade57.png",
+    "static/media/scooper-bg.png": "/portfolio/static/media/scooper-bg.67a1259afb4784ea23ac.png",
+    "static/media/someday-bg.png": "/portfolio/static/media/someday-bg.e33ff3c8e8c1b3ec52c5.png",
+    "static/media/cv-bg.png": "/portfolio/static/media/cv-bg.5b04c90fbf724c21f0b3.png",
+    "static/media/profile.jpg": "/portfolio/static/media/profile.5575c4beaf6d733d4b49.jpg",
+    "index.html": "/portfolio/index.html",
+    "main.82798c3f.css.map": "/portfolio/static/css/main.82798c3f.css.map",
+    "main.3bc6d361.js.map": "/portfolio/static/js/main.3bc6d361.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82798c3f.css",
+    "static/js/main.3bc6d361.js"
+  ]
+}
